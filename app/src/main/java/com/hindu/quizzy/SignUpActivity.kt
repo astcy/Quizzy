@@ -68,9 +68,7 @@ class SignUpActivity : AppCompatActivity() {
                         }
                     }
             }
-
         }
-
     }
 
     private fun saveData(userName: String, emailId: String, password: String, progressDialog: ProgressDialog) {

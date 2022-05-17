@@ -38,6 +38,7 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/quiz_cpp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_margin="5dp"
@@ -70,6 +71,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/quiz_physics"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_margin="5dp"
