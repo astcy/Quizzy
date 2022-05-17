@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignIn"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:textSize="25sp"/>
+
+
+
+    <EditText
+        android:id="@+id/email_signin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_box"
+        android:hint="email"
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"/>
+
+
+    <EditText
+        android:id="@+id/password_signin"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_box"
+        android:textColor="@color/white"
+        android:hint="password"
+        android:padding="5dp"
+        android:layout_margin="10dp"/>
+
+
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:text="SignIn"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quizzy"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/purple_500"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/toSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New to Quizzy?SignUp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+
+</LinearLayout>
