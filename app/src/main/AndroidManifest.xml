@@ -13,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quizzy">
         <activity
-            android:name=".QuizQuestion"
+            android:name=".QuizzActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizQuestionActivity"
             android:exported="false" />
         <activity
             android:name=".Questions"

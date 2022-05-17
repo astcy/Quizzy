@@ -1,19 +1,21 @@
-package com.hindu.unity_quizz
+package com.hindu.quizzy
 
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 
-class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
+class QuizzActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mCurrentPosition: Int = 1
-    private var mQuestionList:ArrayList<Question>? = null
+    private var mQuestionList:ArrayList<Questions>? = null
     private var mSelectedOptionPosition : Int = 0
     private var mUserName : String? = null
     private var mCorrectAnswers : Int = 0
@@ -28,9 +30,10 @@ class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
     private var tvOptionThree: TextView? = null
     private var tvOptionFour: TextView? = null
     private var btn_submit : Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_question)
+        setContentView(R.layout.activity_quizz)
 
         mUserName = intent.getStringExtra(Constants.USER_NAME)
 
@@ -58,7 +61,7 @@ class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
     private fun setQuestion() {
 
         defaultOptionsView()
-        val question: Question = mQuestionList!![mCurrentPosition - 1]
+        val question: Questions = mQuestionList!![mCurrentPosition - 1]
         ivImage?.setImageResource(question.image)
         progressBar?.progress = mCurrentPosition
         tvProgressBar?.text = "$mCurrentPosition/${progressBar?.max}"
@@ -148,7 +151,7 @@ class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
                         }
                         else ->{
 
-                            val intent = Intent(this,Result_activity::class.java)
+                            val intent = Intent(this, ResultActivity::class.java)
                             intent.putExtra(Constants.USER_NAME , mUserName)
                             intent.putExtra(Constants.CORRECT_ANSWERS , mCorrectAnswers )
 

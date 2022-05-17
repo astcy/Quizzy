@@ -1,5 +1,6 @@
 package com.hindu.quizzy.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +8,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.hindu.quizzy.QuizzActivity
 import com.hindu.quizzy.databinding.FragmentHomeBinding
+import com.hindu.unity_quizz.QuizQuestionActivity
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
 
@@ -28,7 +32,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
+        root.quiz_cpp.setOnClickListener {
+            val intent = Intent(context,QuizzActivity::class.java)
+            startActivity(intent)
+        }
 
         return root
     }
